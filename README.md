@@ -54,7 +54,12 @@ The evaluation process follows the protocol established by [WildBench](https://g
     bash leaderboard/data_dir_sea_wb_v3/show_eval.sh 
 
     # show the leaderboard
-    python leaderboard/data_dir_sea_wb_v3/show_table.py --bench_name sea-4o --mode lanwise_reward --K 500
+    # [mode]: lanwise_reward or taskwise_reward
+    #   lanwise_reward: show the leaderboard for each language
+    #   taskwise_reward: show the leaderboard for each task
+    # [K]: parameter used for getting length-controlled win rate. K=500 used for SEA-WildBench.
+
+    python leaderboard/data_dir_sea_wb_v3/show_table.py --bench_name sea-4o --mode [mode] --K [K]
     ```
 
 ## Acknowledgement
